@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mertz Louise Monteras | Portfolio</title>
+   <link rel="stylesheet" href="style.css">
+  <style>
+    
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="D:\my_portfolio\final Logo.png" alt="Mertz Louise Logo" />
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+   
+    <ul id="nav-links">
+      <li><a href="file:///d%3A/my_portfolio/who_mertz.html">Who is Mertz</a></li>
+      <li><a href="file:///D:/my_portfolio/my_background.html">My Background</a></li>
+      <li><a href="file:///D:/my_portfolio/tools.html">Tools I'm Familiar With</a></li>
+      <li><a href="file:///D:/my_portfolio/service.html">Services I Offer</a></li>
+      <li><a href="file:///D:/my_portfolio/contact.html">Contact Me</a></li>
+    </ul>
+  </nav>
+  <section class="hero">   
+    <div class="hero-text">
+       
+      <h1 style="font-family: 'Times New Roman', Times, serif;">Welcome to My Portfolio</h1>
+      <h5 style="font-family: Georgia, 'Times New Roman', Times, serif; justify-items: center; padding-left: 60px;">Mertz Louise Monteras / Virtual Assistant</h5>
+         <hr class="shine">
+    </div>
+
+    <div class="hero-image">
+      <img src="D:\my_portfolio\1-8r f.jpg" alt="Mertz Louise" />
+    </div>
+  </section>
+  
+
+  
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+    }
+    // Toggle logo expand/shrink
+const logoImg = document.querySelector('.logo img');
+logoImg.addEventListener('click', function () {
+  this.classList.toggle('logo-expanded');
+});
+
+ 
+  </script>
+</body>
+</html>

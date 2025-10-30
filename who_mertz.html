@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Mertz</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAVIGATION BAR */
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #111;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ccc;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    /* HOVER FLOAT SHADOW EFFECT */
+    nav ul li a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                   0 0 20px rgba(255, 255, 255, 0.6),
+                   0 0 30px rgba(255, 255, 255, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+    }
+
+    /* LOGO EXPAND EFFECT */
+    .logo-expanded {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 400px !important;
+      height: 400px !important;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+      transition: all 0.4s ease;
+    }
+
+    /* MAIN CONTENT */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      max-width: 1100px;
+      margin: 5rem auto;
+      flex-grow: 1;
+    }
+
+    .text {
+      flex: 1;
+      padding-right: 50px;
+    }
+
+    .text h1 {
+      font-weight: 600;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 4em;
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+    }
+
+    .text h6 {
+      font-weight: bold;
+      line-height: 1.6;
+      color: #ccc;
+      font-size: 1em;
+    }
+
+    .image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image img {
+      width: 400px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 80% 20% 80% 20% / 50% 50% 50% 50%;
+      transform: rotate(1deg);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text {
+        padding-right: 0;
+        margin-bottom: 30px;
+      }
+
+      .image img {
+        width: 250px;
+        height: 300px;
+        transform: rotate(0deg);
+      }
+
+      nav ul {
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        display: none;
+        padding: 1rem 0;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">
+      <img src="D:\my_portfolio\final Logo.png" alt="Mertz Louise Logo" id="logo-img" />
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul id="nav-links">
+      <li><a href="file:///D:/my_portfolio/index.html">Home</a></li>  
+      <li><a href="#who">Who is Mertz</a></li>
+      <li><a href="file:///D:/my_portfolio/my_background.html">My Background</a></li>
+      <li><a href="file:///D:/my_portfolio/tools.html">Tools I'm Familiar With</a></li>
+      <li><a href="file:///D:/my_portfolio/service.html">Services I Offer</a></li>
+      <li><a href="file:///D:/my_portfolio/contact.html">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container" id="who">
+    <div class="text">
+      <h1>Who is Mertz?</h1>
+      <br><br><br><br><br>
+      <h6>
+        I’m a Computer Science graduate and an aspiring Virtual Assistant dedicated 
+        to helping businesses stay organized and efficient. I’ve been actively 
+        upskilling in admin support, data management, Canva design, and email 
+        organization. My goal is to deliver reliable, professional, and creative 
+        solutions that help clients save time and achieve more.
+      </h6>
+      <br>
+      <hr style="height: 2px; width: 200px; background-color: slategray;"> 
+    </div>
+
+    <div class="image">
+      <img src="D:\my_portfolio\burst-kUqqaRjJuw0-unsplash.jpg" alt="Mertz Image">
+    </div>
+  </div>
+
+  <script>
+    // Toggle responsive menu
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    // Toggle logo expand/shrink
+    const logoImg = document.getElementById('logo-img');
+    logoImg.addEventListener('click', function() {
+      this.classList.toggle('logo-expanded');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools I'm Familiar With</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+
+     
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    h1 {
+      font-size: 7em;
+      font-family: 'Times New Roman', Times, serif;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .tools {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1200px;
+      gap: 40px;
+    }
+
+    .tool {
+      flex: 1 1 150px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .tool img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+    }
+
+    .tool:hover img {
+      transform: scale(1.2);
+    }
+
+    .tool p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .tools {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+
+    /* NAVIGATION BAR */
+    nav {
+
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #111;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ccc;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+    }
+      .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+    }
+
+    /* LOGO EXPAND EFFECT */
+.logo-expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px !important;
+  height: 400px !important;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+}
+   
+   /* NAV LINK HOVER FLOAT SHADOW EFFECT */
+nav ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+               0 0 20px rgba(255, 255, 255, 0.6),
+               0 0 30px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+}
+ 
+  </style>
+</head>
+<body>
+
+    <nav>
+    <div class="logo">
+      <img src="D:\my_portfolio\final Logo.png" alt="Mertz Louise Logo" />
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+   
+    <ul id="nav-links">
+      <li><a href="file:///D:/my_portfolio/index.html">Home</a></li>    
+      <li><a href="file:///d%3A/my_portfolio/who_mertz.html">Who is Mertz</a></li>
+      <li><a href="file:///D:/my_portfolio/my_background.html">My Background</a></li>
+      <li><a href="file:///D:/my_portfolio/tools.html">Tools I'm Familiar With</a></li>
+      <li><a href="file:///D:/my_portfolio/service.html">Services I Offer</a></li>
+      <li><a href="file:///D:/my_portfolio/contact.html">Contact Me</a></li>
+    </ul>
+  </nav>
+<br>    
+<br>
+  <h1>Tools I'm Familiar With</h1>
+
+  <div class="tools">
+    <div class="tool">
+      <img src="D:\my_portfolio\canva.webp" alt="Canva Logo">
+      <p>Canva</p>
+    </div>
+
+    <div class="tool">
+      <img src="D:\my_portfolio\xl-2020-google-workspace-1.jpg" alt="Google Workspace Logo">
+      <p>Google Workspace</p>
+    </div>
+
+    <div class="tool">
+      <img src="D:\my_portfolio\microsoft.jpg" alt="Microsoft Office Logo">
+      <p>Microsoft Office</p>
+    </div>
+
+    <div class="tool">
+      <img src="D:\my_portfolio\Trello-logo.jpg" alt="Trello Logo">
+      <p>Trello</p>
+    </div>
+
+    <div class="tool">
+      <img src="D:\my_portfolio\clickup.png" alt="ClickUp Logo">
+      <p>ClickUp</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+    }
+    // Toggle logo expand/shrink
+const logoImg = document.querySelector('.logo img');
+logoImg.addEventListener('click', function () {
+  this.classList.toggle('logo-expanded');
+});
+
+ 
+  </script>
+</body>
+</html>

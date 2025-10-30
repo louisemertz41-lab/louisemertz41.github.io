@@ -1,0 +1,214 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* NAVIGATION BAR */
+    nav {
+
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #111;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ccc;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      padding: 3rem 5%;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1 1 400px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text h5 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #aaa;
+    }
+
+    .hero-image {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .hero-image img {
+      width: 280px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 50% / 65%;
+      border: 3px solid #444;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-text h5 {
+        font-size: 1rem;
+      }
+
+      .hero-image img {
+        width: 220px;
+        height: 320px;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+    }
+
+    /* LOGO EXPAND EFFECT */
+.logo-expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px !important;
+  height: 400px !important;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+}
+   
+   /* NAV LINK HOVER FLOAT SHADOW EFFECT */
+nav ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+               0 0 20px rgba(255, 255, 255, 0.6),
+               0 0 30px rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+}
+ 
+ /* Shine horizontal rule */
+hr.shine {
+    
+  border: 0;
+  height: 20px;
+  width: 500px;
+  margin: 1.5em auto;
+  background-image: radial-gradient(
+    farthest-side at 50% -50%,
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0)
+  );
+  position: relative;
+left: -90px;
+  box-sizing: border-box;
+}
+hr.shine::before {
+    
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0.75) 50%,
+    rgba(255,255,255,0)
+  );
+}
+  a{
+    font-family:sans-serif;
+  }
